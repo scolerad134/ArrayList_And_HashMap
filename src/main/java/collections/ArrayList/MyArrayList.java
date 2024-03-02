@@ -51,16 +51,14 @@ public class MyArrayList<T> {
     }
 
     public boolean add(T elem) {
-        if (size >= capacity)
-            increaseCapacity();
+        if (size >= capacity) increaseCapacity();
 
         array[size++] = elem;
         return true;
     }
 
     public T get(int index) {
-        if (index < 0 || index >= this.size())
-            throw new IndexOutOfBoundsException();
+        if (index < 0 || index >= this.size()) throw new IndexOutOfBoundsException();
 
         return (T) this.array[index];
     }
@@ -74,8 +72,7 @@ public class MyArrayList<T> {
     }
 
     public T remove(int index) {
-        if (index < 0 || index >= this.size())
-            throw new IndexOutOfBoundsException();
+        if (index < 0 || index >= this.size()) throw new IndexOutOfBoundsException();
 
         T removeElem = (T) this.array[index];
         Object[] newArray = new Object[this.size() - 1];
@@ -104,8 +101,7 @@ public class MyArrayList<T> {
     }
 
     public T set(int index, T elem) {
-        if (index < 0 || index >= this.size())
-            throw new IndexOutOfBoundsException();
+        if (index < 0 || index >= this.size()) throw new IndexOutOfBoundsException();
 
         T oldValue = (T) this.array[index];
         this.array[index] = elem;
