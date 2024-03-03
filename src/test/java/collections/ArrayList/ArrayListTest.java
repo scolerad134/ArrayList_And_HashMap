@@ -4,10 +4,10 @@ import models.Model;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class MyArrayListTest {
+public class ArrayListTest {
     @Test
     void testIsEmpty() {
-        MyArrayList<String> list = new MyArrayList<>();
+        ArrayList<String> list = new ArrayList<>();
         list.add("Alex");
         list.add("Dolores");
         list.add("Hunter");
@@ -16,7 +16,7 @@ public class MyArrayListTest {
 
     @Test
     void testSize() {
-        MyArrayList<Model> list = new MyArrayList<>();
+        ArrayList<Model> list = new ArrayList<>();
         list.add(new Model());
         list.add(new Model("Alex", "Bolowiz", 32));
         Assertions.assertEquals(2, list.size());
@@ -24,7 +24,7 @@ public class MyArrayListTest {
 
     @Test
     void testGet1() {
-        MyArrayList<String> list = new MyArrayList<>();
+        ArrayList<String> list = new ArrayList<>();
         list.add("Alex");
         list.add("Dolores");
         list.add("Hunter");
@@ -33,7 +33,7 @@ public class MyArrayListTest {
 
     @Test
     void testGet2() {
-        MyArrayList<String> list = new MyArrayList<>();
+        ArrayList<String> list = new ArrayList<>();
         list.add("Alex");
         list.add("Dolores");
         list.add("Hunter");
@@ -42,7 +42,7 @@ public class MyArrayListTest {
 
     @Test
     void indexOfTest1() {
-        MyArrayList<Integer> list = new MyArrayList<>();
+        ArrayList<Integer> list = new ArrayList<>();
         list.add(5);
         list.add(3);
         list.add(1);
@@ -52,7 +52,7 @@ public class MyArrayListTest {
 
     @Test
     void indexOfTest2() {
-        MyArrayList<Integer> list = new MyArrayList<>();
+        ArrayList<Integer> list = new ArrayList<>();
         list.add(5);
         list.add(3);
         list.add(1);
@@ -62,7 +62,7 @@ public class MyArrayListTest {
 
     @Test
     void testRemoveByIndex1() {
-        MyArrayList<String> list = new MyArrayList<>();
+        ArrayList<String> list = new ArrayList<>();
         list.add("Alex");
         list.add("Dolores");
         list.add("Hunter");
@@ -73,7 +73,7 @@ public class MyArrayListTest {
 
     @Test
     void testRemoveByIndex2() {
-        MyArrayList<String> list = new MyArrayList<>();
+        ArrayList<String> list = new ArrayList<>();
         list.add("Alex");
         list.add("Dolores");
         list.add("Hunter");
@@ -82,7 +82,7 @@ public class MyArrayListTest {
 
     @Test
     void testRemoveByElement() {
-        MyArrayList<String> list = new MyArrayList<>();
+        ArrayList<String> list = new ArrayList<>();
         list.add("Alex");
         list.add("Dolores");
         list.add("Hunter");
@@ -93,7 +93,7 @@ public class MyArrayListTest {
 
     @Test
     void testSet1() {
-        MyArrayList<Model> list = new MyArrayList<>();
+        ArrayList<Model> list = new ArrayList<>();
         Model model1 = new Model("Fani", "Kaplan", 27);
         Model model2 = new Model("Oscar", "Isaac", 25);
         Model model3 = new Model("Odri", "Hupbern", 31);
@@ -110,7 +110,7 @@ public class MyArrayListTest {
 
     @Test
     void testSet2() {
-        MyArrayList<Model> list = new MyArrayList<>();
+        ArrayList<Model> list = new ArrayList<>();
         Model model1 = new Model("Fani", "Kaplan", 27);
         Model model2 = new Model("Oscar", "Isaac", 25);
         Model model3 = new Model("Odri", "Hupbern", 31);
@@ -125,7 +125,7 @@ public class MyArrayListTest {
 
     @Test
     void testToArray1() {
-        MyArrayList<Integer> list = new MyArrayList<>();
+        ArrayList<Integer> list = new ArrayList<>();
         list.add(5);
         list.add(3);
         list.add(1);
@@ -135,7 +135,7 @@ public class MyArrayListTest {
 
     @Test
     void testToArray2() {
-        MyArrayList<Integer> list = new MyArrayList<>();
+        ArrayList<Integer> list = new ArrayList<>();
         list.add(5);
         list.add(3);
         list.add(1);

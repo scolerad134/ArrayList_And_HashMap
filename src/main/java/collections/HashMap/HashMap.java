@@ -4,7 +4,7 @@ import java.util.*;
 
 import static java.lang.Math.abs;
 
-public class MyHashMap<K, V> {
+public class HashMap<K, V> {
     static final int DEFAULT_INITIAL_CAPACITY = 1 << 4;
     static final float DEFAULT_LOAD_FACTOR = 0.75f;
 
@@ -28,7 +28,7 @@ public class MyHashMap<K, V> {
         }
     }
 
-    public MyHashMap() {
+    public HashMap() {
         this.size = 0;
         this.loadFactor = DEFAULT_LOAD_FACTOR;
         this.mapFullness = 0;
@@ -36,11 +36,11 @@ public class MyHashMap<K, V> {
         this.table = new Node[DEFAULT_INITIAL_CAPACITY];
     }
 
-    public MyHashMap(int initialCapacity) {
+    public HashMap(int initialCapacity) {
         this(initialCapacity, DEFAULT_LOAD_FACTOR);
     }
 
-    public MyHashMap(int initialCapacity, float loadFactor) {
+    public HashMap(int initialCapacity, float loadFactor) {
         this.size = 0;
         this.loadFactor = loadFactor;
         this.mapFullness = 0;
@@ -228,7 +228,7 @@ public class MyHashMap<K, V> {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        MyHashMap<?, ?> myHashMap = (MyHashMap<?, ?>) o;
+        HashMap<?, ?> myHashMap = (HashMap<?, ?>) o;
         return size == myHashMap.size && threshold == myHashMap.threshold && Float.compare(loadFactor, myHashMap.loadFactor) == 0 && Arrays.equals(table, myHashMap.table);
     }
 

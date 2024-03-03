@@ -3,16 +3,15 @@ package collections.HashMap;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.ArrayList;
 
-public class MyHashMapTest {
+public class HashMapTest {
     @Test
     void testPut() {
-        HashMap<String, String> map = new HashMap<>();
-        MyHashMap<String, String> checkMap = new MyHashMap<>();
+        java.util.HashMap<String, String> map = new java.util.HashMap<>();
+        HashMap<String, String> checkMap = new HashMap<>();
         map.put("IT", "Alex");
 
         Assertions.assertEquals(null, checkMap.put("IT", "Alex"));
@@ -23,7 +22,7 @@ public class MyHashMapTest {
 
     @Test
     void testGet() {
-        MyHashMap<String, String> map = new MyHashMap<>();
+        HashMap<String, String> map = new HashMap<>();
         map.put("IT", "Alex");
 
         Assertions.assertEquals(null, map.get("HR"));
@@ -32,7 +31,7 @@ public class MyHashMapTest {
 
     @Test
     void testContainsKey() {
-        MyHashMap<String, String> map = new MyHashMap<>();
+        HashMap<String, String> map = new HashMap<>();
         map.put("IT", "Alex");
         map.put("HR", "Dolores");
         map.put("IT", "Mark");
@@ -43,7 +42,7 @@ public class MyHashMapTest {
 
     @Test
     void testContainsValue() {
-        MyHashMap<String, String> map = new MyHashMap<>();
+        HashMap<String, String> map = new HashMap<>();
         map.put("IT", "Alex");
         map.put("HR", "Dolores");
         map.put("IT", "Mark");
@@ -56,7 +55,7 @@ public class MyHashMapTest {
 
     @Test
     void testSize() {
-        MyHashMap<Integer, String> map = new MyHashMap<>();
+        HashMap<Integer, String> map = new HashMap<>();
         map.put(1, "Maria");
         map.put(2, "Vera");
         map.put(3, "Hunter");
@@ -66,7 +65,7 @@ public class MyHashMapTest {
 
     @Test
     void testKeySet() {
-        MyHashMap<String, String> map = new MyHashMap<>();
+        HashMap<String, String> map = new HashMap<>();
         map.put("IT", "Alex");
         map.put("HR", "Dolores");
         map.put("Manager", "Mark");
@@ -83,7 +82,7 @@ public class MyHashMapTest {
 
     @Test
     void testValues() {
-        MyHashMap<String, String> map = new MyHashMap<>();
+        HashMap<String, String> map = new HashMap<>();
         map.put("IT", "Alex");
         map.put("HR", "Dolores");
         map.put("Manager", "Mark");
@@ -98,7 +97,7 @@ public class MyHashMapTest {
 
     @Test
     void testClear() {
-        MyHashMap<String, String> map = new MyHashMap<>();
+        HashMap<String, String> map = new HashMap<>();
         map.put("IT", "Alex");
         map.put("HR", "Dolores");
         map.put("Manager", "Mark");
@@ -112,7 +111,7 @@ public class MyHashMapTest {
 
     @Test
     void testIsEmpty() {
-        MyHashMap<String, String> map = new MyHashMap<>();
+        HashMap<String, String> map = new HashMap<>();
         map.put("IT", "Alex");
         map.put("HR", "Dolores");
         map.put("Manager", "Mark");
@@ -126,7 +125,7 @@ public class MyHashMapTest {
 
     @Test
     void testRemove() {
-        MyHashMap<String, String> map = new MyHashMap<>();
+        HashMap<String, String> map = new HashMap<>();
         map.put("IT", "Alex");
         map.put("HR", "Dolores");
         map.put("Manager", "Mark");

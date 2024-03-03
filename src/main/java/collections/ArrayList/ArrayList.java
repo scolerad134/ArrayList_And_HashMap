@@ -3,25 +3,25 @@ package collections.ArrayList;
 
 import java.util.Arrays;
 
-public class MyArrayList<T> {
+public class ArrayList<T> {
     private static final int DEFAULT_CAPACITY = 10;
     private Object[] array;
     private int size;
     private int capacity;
 
-    public MyArrayList() {
+    public ArrayList() {
         capacity = DEFAULT_CAPACITY;
         array = new Object[DEFAULT_CAPACITY];
         size = 0;
     }
 
-    public MyArrayList(int initialCapacity) {
+    public ArrayList(int initialCapacity) {
         capacity = initialCapacity;
         array = new Object[initialCapacity];
         size = 0;
     }
 
-    public MyArrayList(MyArrayList<T> array) {
+    public ArrayList(ArrayList<T> array) {
         this.capacity = array.capacity;
         this.array = new Object[this.capacity];
         this.size = array.size();
@@ -134,7 +134,7 @@ public class MyArrayList<T> {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        MyArrayList<?> that = (MyArrayList<?>) o;
+        ArrayList<?> that = (ArrayList<?>) o;
         return size == that.size && capacity == that.capacity && Arrays.equals(array, that.array);
     }
 }
